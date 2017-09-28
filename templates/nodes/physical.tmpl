@@ -1,0 +1,150 @@
+{{ define "nodes/physical.tmpl" }}
+{{template "headerpart" .}}
+<!-- Right Column -->
+<div >
+<div class="page-cover"></div>
+<!-- List Panel -->
+<div class="panel panel-default panel-custom" id="list_panel">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			<span class="glyphicon glyphicon-th-list"></span>
+			<span id="list_panel_title">Physical Nodes</span>
+		</h3>
+	</div>
+	<div class="panel-body" style="height: 100%;">
+		<!-- Item Selection -->
+		<div class="input-group text-left">
+			<select class="form-control" id="edit_item">
+			</select>
+			<span class="input-group-btn">
+				<button class="btn btn-default" id="new_btn" type="button">
+					<span class="glyphicon glyphicon-plus"></span>New
+				</button>
+				<button class="btn btn-default" id="edit_btn" type="button">
+					<span class="glyphicon glyphicon-edit"></span>Edit
+				</button>
+				<button class="btn btn-default" id="delete_btn" type="button">
+					<span class="glyphicon glyphicon-minus"></span>Delete
+				</button>
+			</span>
+		</div><!-- /Item Selection -->
+		<br>
+		<table class="table table-condensed table-striped" id="list_table">
+			<thead>
+				<tr>
+					<th width="10%">No.</th>
+					<th width="40%">Name</th>
+					<th width="10%">Physical/<br/>Virtual</th>
+					<th width="10%">Node Type</th>
+					<th width="30%">Remark</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</div><!-- /List Panel -->
+
+{{template "edit_node" .}}
+
+</div><!--/Right Column-->
+
+<script language="javascript">
+(function($) {
+
+	{{template "functions" .}}
+	{{template "functions_nodes" .}}
+
+	function setNodes() {
+		$('#edit_item').children().remove();
+		for (var i = 0; i < nodes.length; i = i + 1) {
+			var nodePv = 'physical';
+			if (nodes[i].node_extra_attribute_map_by_name['virtual'].value_bool.Bool) {
+				nodePv = 'virtual';
+			}
+
+			$('#edit_item').append($('<option>').val(nodes[i].id).text(nodes[i].name));
+			$('#list_table').append(
+				$('<tr>').append(
+					$('<td>').prop('width', '10%').prop('align', 'right').append(
+						i + 1
+					)
+				).append(
+					$('<td>').prop('width', '40%').append(
+						nodes[i].name
+					)
+				).append(
+					$('<td>').prop('width', '10%').append(
+						nodePv
+					)
+				).append(
+					$('<td>').prop('width', '10%').append(
+						nodes[i].node_type.name
+					)
+				).append(
+					$('<td>').prop('width', '30%').append(
+						nodes[i].remark
+					)
+				)
+			);
+		} // for
+	}
+
+	function onLoad() {
+		$('.page-cover').fadeOut(150);
+		$('.item-edit-panel').fadeOut(150);
+		$('#list_panel').fadeIn(150);
+		loadResources();
+		setEditPortsTable();
+		setNodes()
+	}
+
+	function onNodeModified() {
+		$('.page-cover').fadeOut(150);
+		$('.item-edit-panel').fadeOut(150);
+		loadResources();
+		setNodes(true);
+	}
+
+	// nodes
+	$('#new_btn').on('click', function() {
+		onNewNode();
+	});
+
+	$('#edit_btn').on('click', function() {
+		onEditNode($('#edit_item').val());
+	});
+
+	$('#delete_btn').on('click', function() {
+		onDeleteNode($('#edit_item').val());
+	});
+
+	//edit_panel
+	// ports
+	$('#edit_add_port_btn').on('click', function() {
+		onAddPort();
+	});
+
+	$('#edit_delete_port_btn').on('click', function() {
+		onDeletePort();
+	});
+
+	$('#edit_ports_table').on('change', 'select[name=edit_port_destination_node_id]', function(selector) {
+		onEditPortNodeChanged(selector);
+	});
+
+	$('#ok_edit_btn').on('click', function() {
+		onOKRegister();
+	});
+
+	$('#cancel_edit_btn').on('click', function() {
+		onCancelRegister();
+	});
+
+	onLoad();
+
+})(jQuery);
+</script>
+
+{{template "footerpart" .}}
+{{ end }}

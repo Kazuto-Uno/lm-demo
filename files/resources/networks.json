@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "LAN1",
+    "remark": "network setting 1",
+    "subnet": "172.16.0.0/16",
+    "gateway": "172.16.0.1",
+    "nodes": [
+      { "id": 2, "name": "l2sw1", "ipv4_address": null, "mac_address": null, "remarks":null },
+      { "id": 4, "name": "inst1", "ipv4_address": "172.16.0.2", "mac_address": "02:42:ac:11:00:04", "remarks":null },
+      { "id": 5, "name": "inst2", "ipv4_address": "172.16.0.3", "mac_address": "02:42:ac:11:00:05", "remarks":null }
+    ],
+    "content": ""
+  },
+  {
+    "id": 2,
+    "name": "LAN2",
+    "remark": "network setting 2",
+    "subnet": "172.17.0.0/16",
+    "gateway": "172.17.0.1",
+    "nodes": [
+      { "id": 3, "name": "l2sw2", "ipv4_address": null, "mac_address": null, "remarks":null  },
+      { "id": 6, "name": "inst3", "ipv4_address": "172.17.0.2", "mac_address": "02:42:ac:11:00:06", "remarks":null },
+      { "id": 7, "name": "inst4", "ipv4_address": "172.17.0.3", "mac_address": "02:42:ac:11:00:07", "remarks":null }
+    ],
+    "content": ""
+  },
+  {
+    "id": 3,
+    "name": "WAN1",
+    "remark": "network setting 3",
+    "subnet": "203.17.0.0/16",
+    "gateway": "203.17.0.1",
+    "nodes": [
+      { "id": 1, "name": "firewall", "ipv4_address": "203.17.0.2", "mac_address": "02:42:ac:11:00:01", "remarks":null  },
+      { "id": 14, "name": "provisioner", "ipv4_address": "203.17.0.3", "mac_address": "02:42:ac:11:00:14", "remarks":null  },
+      { "id": 15, "name": "router1", "ipv4_address": "203.17.0.1", "mac_address": "02:42:ac:11:00:15", "remarks":null  },
+      { "id": 16, "name": "l2sw3", "ipv4_address": null, "mac_address": null, "remarks":null  }
+    ],
+    "content": "(VLAN 2000)\n\nNetwork Address\n203.x.x.x/yy\n\nGateway\n...\n\nNodeList\n IP Address: 203.x.x.v\n IP Address: 203.x.x.w\n IP Address: 203.x.x.x\n..."
+  },
+  {
+    "id": 4,
+    "name": "WAN2",
+    "remark": "network setting 4",
+    "subnet": null,
+    "gateway": null,
+    "nodes": [],
+    "content": null
+  }
+]

@@ -1,0 +1,265 @@
+{{ define "nodes/liquid_metals.tmpl" }}
+{{template "headerpart" .}}
+<!-- Right Column -->
+<div >
+<div class="page-cover"></div>
+<!-- List Panel -->
+<div class="panel panel-default panel-custom" id="list_panel">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			<span class="glyphicon glyphicon-th-list"></span>
+			<span id="list_panel_title">Liquid Metal Nodes</span>
+		</h3>
+	</div>
+	<div class="panel-body" style="height: 100%;">
+		<!-- Item Selection -->
+		<div class="input-group text-left">
+			<select class="form-control" id="edit_item">
+			</select>
+			<span class="input-group-btn">
+				<button class="btn btn-default" id="new_btn" type="button">
+					<span class="glyphicon glyphicon-plus"></span>New
+				</button>
+				<button class="btn btn-default" id="edit_btn" type="button">
+					<span class="glyphicon glyphicon-edit"></span>Edit
+				</button>
+				<button class="btn btn-default" id="delete_btn" type="button">
+					<span class="glyphicon glyphicon-minus"></span>Delete
+				</button>
+				<button class="btn btn-default" id="build_btn" type="button">
+					<span class="glyphicon glyphicon-cog"></span>build
+				</button>
+			</span>
+		</div><!-- /Item Selection -->
+		<br>
+		<table class="table table-condensed table-striped" id="list_table">
+			<thead>
+				<tr>
+					<th width="10%">No.</th>
+					<th width="40%">Name</th>
+					<th width="10%">Status</th>
+					<th width="40%">Remarks</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</div><!-- /List Panel -->
+
+<div class="item-edit-panel">
+	<!-- Item Edit Panel -->
+	<div class="panel panel-default" id="edit_panel">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				<span class="glyphicon glyphicon-edit"></span>
+				<span id="edit_panel_title"></span>
+			</h3>
+		</div>
+		<div class="panel-body">
+			<table class="table">
+				<tr>
+					<th width="20%">
+						<span class="glyphicon glyphicon-file"></span> Property
+					</th>
+					<th width="80%">
+						<span class="glyphicon glyphicon-pencil"></span> Value
+					</th>
+				</tr>
+				<tr>
+					<td width="20%">Name</td>
+					<td width="80%">
+						<input type="hidden" id="edit_id">
+						<input id="edit_name" type="text" name="edit_name" placeholder="Liquid Metal Node name" class="form-control">
+					</td>
+				</tr>
+				<tr>
+					<td width="20%">Remark</td>
+					<td width="80%">
+						<input id="edit_remark" type="text" name="edit_remark" placeholder="remark" class="form-control">
+					</td>
+				</tr>
+				<tr>
+					<th colspan=2>Contents</th>
+				</tr>
+				<tr>
+					<td colspan=2>
+						<textarea id="edit_content" name="edit_content" class="form-control" rows="15"></textarea>
+					</td>
+				</tr>
+			</table>
+			<div style="margin-left:10px;margin-bottom:10px;">
+				<span class="input-group-btn">
+					<button id="ok_edit_btn" type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-ok">OK</span>
+					</button>
+					<button id="cancel_edit_btn" type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-remove">Cancel</span>
+					</button>
+				</span>
+			</div>
+		</div>
+	</div><!-- /Item Edit Panel -->
+</div>
+
+</div><!--/Right Column-->
+
+<script language="javascript">
+(function($) {
+
+	{{template "functions" .}}
+
+	var nodes = null;
+	var nodeMap = null;
+	var editMode = null;
+	var editingItem = null;
+
+	function loadResources() {
+	    nodes = getResources('files/resources/liquid_metals.json', '').resources;
+		nodeMap = buildResouceMapFromResourceArray(nodes);
+		$('#edit_item').children().remove();
+		for (var i = 0; i < nodes.length; i = i + 1) {
+			$('#edit_item').append($('<option>').val(nodes[i].id).text(nodes[i].name));
+			var status_before = '<font color="green"><span class="glyphicon glyphicon-ok-sign"></span>';
+			var status_after = '</font>';
+			if (nodes[i].status == 'offline' ) {
+				status_before = '<font color="red"><span class="glyphicon glyphicon-minus-sign"></span>';
+			}
+			$('#list_table').append(
+				$('<tr>').append(
+					$('<td>').prop('width', '10%').prop('align', 'right').append(
+						i + 1
+					)
+				).append(
+					$('<td>').prop('width', '40%').append(
+						nodes[i].name
+					)
+				).append(
+					$('<td>').prop('width', '10%').append(
+						 status_before + nodes[i].status + status_after
+					)
+				).append(
+					$('<td>').prop('width', '40%').append(
+						nodes[i].remark
+					)
+				)
+			);
+		}
+	}
+
+	function onNewItem() {
+		$('.page-cover').fadeIn(150);
+		$('.item-edit-panel').fadeOut(150, function() {
+			// Set edit mode to Update
+			editMode = 'Register';
+			$('#edit_panel_title').children().remove();
+			$('#edit_panel_title').append($('<span>').text('Liquid Metal Node registration'));
+
+			$('#edit_id').val('');
+ 			$('#edit_name').val('');
+			$('#edit_remark').val('');
+			$('#edit_content').val('');
+
+			$('.item-edit-panel').fadeIn(150, function() {
+			});
+		});
+	}
+
+	function onEditItem() {
+		if ($('#edit_item').val() == null) {
+			alert('Add a node first.');
+			return;
+		}
+
+		$('.page-cover').fadeIn(150);
+		$('.item-edit-panel').fadeOut(150, function() {
+			// Set edit mode to Update
+			editMode = 'Update';
+			$('#edit_panel_title').children().remove();
+			$('#edit_panel_title').append($('<span>').text('Liquid Metal Node update'));
+
+			editingItem = nodeMap[$('#edit_item').val()];
+			$('#edit_id').val(editingItem.id);
+ 			$('#edit_name').val(editingItem.name);
+			$('#edit_remark').val(editingItem.remark);
+			$('#edit_content').val(editingItem.content);
+
+			$('.item-edit-panel').fadeIn(150, function() {
+			});
+		});
+	}
+
+	function onDeleteItem() {
+		if ($('#edit_item').val() == null) {
+			alert('Add a Liquid Metal node first.');
+			return;
+		}
+
+		if (!confirm('Are you sure to delete?')) {
+			return;
+		}
+
+		var itemId = $('#edit_item').val();
+
+	}
+
+	function onOKRegister() {
+		if (editMode == 'Register') {
+			if (!confirm('Are you sure to register?')) {
+				return;
+			}
+		} else {
+			if (!confirm('Are you sure to update?')) {
+				return;
+			}
+		}
+
+	}
+
+	function onCancelRegister() {
+		if(!$('.item-edit-panel').is(":visible")) return;
+		if (!confirm('Are you sure to cancel?')) {
+			return false;
+		}
+
+		$('html,body').animate({scrollTop:0},'slow');
+		$('.item-edit-panel').fadeOut(150);
+		$('.page-cover').fadeOut(150);
+	}
+
+	function onLoad() {
+		loadResources();
+		$('.page-cover').fadeOut(150);
+		$('.item-edit-panel').fadeOut(150);
+		$('#list_panel').fadeIn(150);
+	}
+
+	// networks
+	$('#new_btn').on('click', function() {
+		onNewItem();
+	});
+
+	$('#edit_btn').on('click', function() {
+		onEditItem();
+	});
+
+	$('#delete_btn').on('click', function() {
+		onDeleteItem();
+	});
+
+	//edit_panel
+	$('#ok_edit_btn').on('click', function() {
+		onOKRegister();
+	});
+
+	$('#cancel_edit_btn').on('click', function() {
+		onCancelRegister();
+	});
+
+	onLoad();
+
+})(jQuery);
+</script>
+
+{{template "footerpart" .}}
+{{ end }}

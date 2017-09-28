@@ -1,0 +1,337 @@
+{{ define "nodes/networks.tmpl" }}
+{{template "headerpart" .}}
+<!-- Right Column -->
+<div >
+<div class="page-cover"></div>
+<!-- List Panel -->
+<div class="panel panel-default panel-custom" id="list_panel">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			<span class="glyphicon glyphicon-th-list"></span>
+			<span id="list_panel_title">Networks</span>
+		</h3>
+	</div>
+	<div class="panel-body" style="height: 100%;">
+		<!-- Item Selection -->
+		<div class="input-group text-left">
+			<select class="form-control" id="edit_item">
+			</select>
+			<span class="input-group-btn">
+				<button class="btn btn-default" id="new_btn" type="button">
+					<span class="glyphicon glyphicon-plus"></span>New
+				</button>
+				<button class="btn btn-default" id="edit_btn" type="button">
+					<span class="glyphicon glyphicon-edit"></span>Edit
+				</button>
+				<button class="btn btn-default" id="delete_btn" type="button">
+					<span class="glyphicon glyphicon-minus"></span>Delete
+				</button>
+			</span>
+		</div><!-- /Item Selection -->
+		<br>
+		<table class="table table-condensed table-striped" id="list_table">
+			<thead>
+				<tr>
+					<th width="5%">No.</th>
+					<th width="20%">Name</th>
+					<th width="10%">Subnet</th>
+					<th width="10%">Gateway</th>
+					<th width="5%">Nodes</th>
+					<th width="50%">Remark</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</div><!-- /List Panel -->
+
+<div class="item-edit-panel">
+	<!-- Item Edit Panel -->
+	<div class="panel panel-default" id="edit_panel">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				<span class="glyphicon glyphicon-edit"></span>
+				<span id="edit_panel_title"></span>
+			</h3>
+		</div>
+		<div class="panel-body">
+			<table class="table">
+				<tr>
+					<th width="20%">
+						<span class="glyphicon glyphicon-file"></span> Property
+					</th>
+					<th width="80%">
+						<span class="glyphicon glyphicon-pencil"></span> Value
+					</th>
+				</tr>
+				<tr>
+					<td width="20%">Network Name</td>
+					<td width="80%">
+						<input type="hidden" id="edit_id">
+						<input id="edit_name" type="text" name="edit_name" placeholder="network name" class="form-control">
+					</td>
+				</tr>
+				<tr>
+					<td width="20%">Subnet</td>
+					<td width="80%">
+						<input id="edit_subnet" type="text" name="edit_subnet" placeholder="ipv4 address like 172.16.0.0/24" class="form-control">
+					</td>
+				</tr>
+				<tr>
+					<td width="20%">Gateway</td>
+					<td width="80%">
+						<input id="edit_gateway" type="text" name="edit_gateway" placeholder="ipv4 address like 172.16.0.1" class="form-control">
+					</td>
+				</tr>
+				<tr>
+					<td width="20%">Remark</td>
+					<td width="80%">
+						<input id="edit_remark" type="text" name="edit_node_remark" placeholder="remark" class="form-control">
+					</td>
+				</tr>
+				<tr>
+					<th colspan=2>Contents</th>
+				</tr>
+				<tr>
+					<td colspan=2>
+						<textarea id="edit_content" name="edit_content" class="form-control" rows="5"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th colspan=2>Nodes(<span id="edit_nodes_count"></span>)</th>
+				</tr>
+				<tr>
+					<td colspan=2>
+						<table class="table table-condensed table-striped" id="edit_nodes_table">
+							<thead>
+								<tr>
+									<th width="5%">No.</th>
+									<th width="20%">Name</th>
+									<th width="10%">IPv4 Address</th>
+									<th width="10%">MacAddress</th>
+									<th width="55%">Remark</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<div style="margin-left:10px;margin-bottom:10px;">
+				<span class="input-group-btn">
+					<button id="ok_edit_btn" type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-ok">OK</span>
+					</button>
+					<button id="cancel_edit_btn" type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-remove">Cancel</span>
+					</button>
+				</span>
+			</div>
+		</div>
+	</div><!-- /Item Edit Panel -->
+</div>
+
+</div><!--/Right Column-->
+
+<script language="javascript">
+(function($) {
+
+	{{template "functions" .}}
+
+	var networks = null;
+	var networkMap = null;
+	var editMode = null;
+	var editingItem = null;
+
+	function loadResources() {
+	    networks = getResources('files/resources/networks.json', '').resources;
+		networkMap = buildResouceMapFromResourceArray(networks);
+		$('#edit_item').children().remove();
+		for (var i = 0; i < networks.length; i = i + 1) {
+			$('#edit_item').append($('<option>').val(networks[i].id).text(networks[i].name));
+			$('#list_table').append(
+				$('<tr>').append(
+					$('<td>').prop('width', '5%').prop('align', 'right').append(
+						i + 1
+					)
+				).append(
+					$('<td>').prop('width', '20%').append(
+						networks[i].name
+					)
+				).append(
+					$('<td>').prop('width', '10%').append(
+						networks[i].subnet
+					)
+				).append(
+					$('<td>').prop('width', '10%').append(
+						networks[i].gateway
+					)
+				).append(
+					$('<td>').prop('width', '5%').prop('align', 'right').append(
+						networks[i].nodes.length
+					)
+				).append(
+					$('<td>').prop('width', '50%').append(
+						networks[i].remark
+					)
+				)
+			);
+		}
+	}
+
+	function onNewItem() {
+		$('.page-cover').fadeIn(150);
+		$('.item-edit-panel').fadeOut(150, function() {
+			// Set edit mode to Update
+			editMode = 'Register';
+			$('#edit_panel_title').children().remove();
+			$('#edit_panel_title').append($('<span>').text('Network registration'));
+
+			$('#edit_id').val('');
+ 			$('#edit_name').val('');
+ 			$('#edit_subnet').val('');
+ 			$('#edit_gateway').val('');
+			$('#edit_remark').val('');
+			$('#edit_content').val('');
+
+			$('#edit_nodes_count').children().remove();
+			$('#edit_nodes_count').append($('<span>').text('0'));
+			$('#edit_nodes_table tbody').empty();
+
+			$('.item-edit-panel').fadeIn(150, function() {
+			});
+		});
+	}
+
+	function onEditItem() {
+		if ($('#edit_item').val() == null) {
+			alert('Add a Network first.');
+			return;
+		}
+
+		$('.page-cover').fadeIn(150);
+		$('.item-edit-panel').fadeOut(150, function() {
+			// Set edit mode to Update
+			editMode = 'Update';
+			$('#edit_panel_title').children().remove();
+			$('#edit_panel_title').append($('<span>').text('Network update'));
+
+			editingItem = networkMap[$('#edit_item').val()];
+			$('#edit_id').val(editingItem.id);
+ 			$('#edit_name').val(editingItem.name);
+ 			$('#edit_subnet').val(editingItem.subnet);
+ 			$('#edit_gateway').val(editingItem.gateway);
+			$('#edit_remark').val(editingItem.remark);
+			$('#edit_content').val(editingItem.content);
+
+			var ref_nodes = editingItem.nodes;
+			$('#edit_nodes_count').children().remove();
+			$('#edit_nodes_count').append($('<span>').text(ref_nodes.length));
+			$('#edit_nodes_table tbody').empty();
+			for (var i = 0; i < ref_nodes.length; i = i + 1) {
+				$('#edit_nodes_table').append(
+					$('<tr>').append(
+						$('<td>').prop('width', '5%').prop('align', 'right').append(
+							i + 1
+						)
+					).append(
+						$('<td>').prop('width', '20%').append(
+							ref_nodes[i].name
+						)
+					).append(
+						$('<td>').prop('width', '10%').append(
+							ref_nodes[i].ipv4_address
+						)
+					).append(
+						$('<td>').prop('width', '10%').append(
+							ref_nodes[i].mac_address
+						)
+					).append(
+						$('<td>').prop('width', '55%').append(
+							ref_nodes[i].remark
+						)
+					)
+				);
+			}
+
+			$('.item-edit-panel').fadeIn(150, function() {
+			});
+		});
+	}
+
+	function onDeleteItem() {
+		if ($('#edit_item').val() == null) {
+			alert('Add a Network first.');
+			return;
+		}
+
+		if (!confirm('Are you sure to delete?')) {
+			return;
+		}
+
+		var itemId = $('#edit_item').val();
+
+	}
+
+	function onOKRegister() {
+		if (editMode == 'Register') {
+			if (!confirm('Are you sure to register?')) {
+				return;
+			}
+		} else {
+			if (!confirm('Are you sure to update?')) {
+				return;
+			}
+		}
+
+	}
+
+	function onCancelRegister() {
+		if(!$('.item-edit-panel').is(":visible")) return;
+		if (!confirm('Are you sure to cancel?')) {
+			return false;
+		}
+
+		$('html,body').animate({scrollTop:0},'slow');
+		$('.item-edit-panel').fadeOut(150);
+		$('.page-cover').fadeOut(150);
+	}
+
+	function onLoad() {
+		loadResources();
+		$('.page-cover').fadeOut(150);
+		$('.item-edit-panel').fadeOut(150);
+		$('#list_panel').fadeIn(150);
+	}
+
+	// networks
+	$('#new_btn').on('click', function() {
+		onNewItem();
+	});
+
+	$('#edit_btn').on('click', function() {
+		onEditItem();
+	});
+
+	$('#delete_btn').on('click', function() {
+		onDeleteItem();
+	});
+
+	//edit_panel
+	$('#ok_edit_btn').on('click', function() {
+		onOKRegister();
+	});
+
+	$('#cancel_edit_btn').on('click', function() {
+		onCancelRegister();
+	});
+
+	onLoad();
+
+})(jQuery);
+</script>
+
+{{template "footerpart" .}}
+{{ end }}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "gateway",
+    "port_extra_attribute_options": null,
+    "port_extra_attributes": null
+  },
+  {
+    "id": 2,
+    "name": "remark",
+    "port_extra_attribute_options": null,
+    "port_extra_attributes": null
+  }
+]

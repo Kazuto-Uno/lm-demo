@@ -1,0 +1,366 @@
+{
+  "links": [
+    {
+      "source": "WAN1-firewall",
+      "target": "WAN1-l2sw3",
+      "meta": {
+        "interface": {
+          "source": "port0",
+          "target": "port2"
+        }
+      }
+    },
+    {
+      "source": "WAN1-firewall",
+      "target": "LAN1-l2sw1",
+      "meta": {
+        "interface": {
+          "source": "port1",
+          "target": "port0"
+        }
+      }
+    },
+    {
+      "source": "WAN1-firewall",
+      "target": "LAN2-l2sw2",
+      "meta": {
+        "interface": {
+          "source": "port2",
+          "target": "port0"
+        }
+      }
+    },
+    {
+      "source": "LAN1-l2sw1",
+      "target": "LAN1-inst1",
+      "meta": {
+        "interface": {
+          "source": "port1",
+          "target": "eth0"
+        }
+      }
+    },
+    {
+      "source": "LAN1-l2sw1",
+      "target": "LAN1-inst2",
+      "meta": {
+        "interface": {
+          "source": "port2",
+          "target": "eth0"
+        }
+      }
+    },
+    {
+      "source": "LAN2-l2sw2",
+      "target": "LAN2-inst3",
+      "meta": {
+        "interface": {
+          "source": "port1",
+          "target": "eth0"
+        }
+      }
+    },
+    {
+      "source": "LAN2-l2sw2",
+      "target": "LAN2-inst4",
+      "meta": {
+        "interface": {
+          "source": "port2",
+          "target": "eth0"
+        }
+      }
+    },
+    {
+      "source": "WAN1-firewall",
+      "target": "l2sw7",
+      "meta": {
+        "interface": {
+          "source": "port3",
+          "target": "port0"
+        }
+      }
+    },
+    {
+      "source": "l2sw7",
+      "target": "tftp",
+      "meta": {
+        "interface": {
+          "source": "port1",
+          "target": "eth0"
+        }
+      }
+    },
+    {
+      "source": "l2sw7",
+      "target": "telnethop1",
+      "meta": {
+        "interface": {
+          "source": "port2",
+          "target": "eth0"
+        }
+      }
+    },
+    {
+      "source": "l2swk1",
+      "target": "telnethop1",
+      "meta": {
+        "interface": {
+          "source": "port0",
+          "target": "eth1"
+        }
+      }
+    },
+    {
+      "source": "l2swk1",
+      "target": "telnethop2",
+      "meta": {
+        "interface": {
+          "source": "port1",
+          "target": "eth0"
+        }
+      }
+    },
+    {
+      "source": "l2swk2",
+      "target": "telnethop2",
+      "meta": {
+        "interface": {
+          "source": "port0",
+          "target": "eth1"
+        }
+      }
+    },
+    {
+      "source": "l2swk2",
+      "target": "WAN1-provisioner",
+      "meta": {
+        "interface": {
+          "source": "port1",
+          "target": "eth1"
+        }
+      }
+    },
+    {
+      "source": "WAN1-provisioner",
+      "target": "WAN1-l2sw3",
+      "meta": {
+        "interface": {
+          "source": "eth0",
+          "target": "port1"
+        }
+      }
+    },
+    {
+      "source": "WAN1-router1",
+      "target": "internet",
+      "meta": {
+        "interface": {
+          "source": "port0",
+          "target": "port1"
+        }
+      }
+    },
+    {
+      "source": "WAN1-router1",
+      "target": "WAN1-l2sw3",
+      "meta": {
+        "interface": {
+          "source": "port1",
+          "target": "port0"
+        }
+      }
+    },
+    {
+      "source": "internet",
+      "target": "GooglePublicDNS",
+      "meta": {
+        "interface": {
+          "source": "port0",
+          "target": "port0"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": 0,
+      "name": "WAN1-firewall",
+      "icon": "/files/images/diagram/firewall.png",
+      "meta": {
+        "node_id": 1
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "LAN1-l2sw1",
+      "icon": "/files/images/diagram/l2switch.png",
+      "meta": {
+        "node_id": 2
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "LAN2-l2sw2",
+      "icon": "/files/images/diagram/l2switch.png",
+      "meta": {
+        "node_id": 3
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "LAN1-inst1",
+      "icon": "/files/images/diagram/server.png",
+      "meta": {
+        "node_id": 4
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "LAN1-inst2",
+      "icon": "/files/images/diagram/server.png",
+      "meta": {
+        "node_id": 5
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "LAN2-inst3",
+      "icon": "/files/images/diagram/server.png",
+      "meta": {
+        "node_id": 6
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "LAN2-inst4",
+      "icon": "/files/images/diagram/server.png",
+      "meta": {
+        "node_id": 7
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "l2sw7",
+      "icon": "/files/images/diagram/l2switch.png",
+      "meta": {
+        "node_id": 8
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "tftp",
+      "icon": "/files/images/diagram/server.png",
+      "meta": {
+        "node_id": 9
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "l2swk1",
+      "icon": "/files/images/diagram/l2switch.png",
+      "meta": {
+        "node_id": 10
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "l2swk2",
+      "icon": "/files/images/diagram/l2switch.png",
+      "meta": {
+        "node_id": 11
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "telnethop1",
+      "icon": "/files/images/diagram/server.png",
+      "meta": {
+        "node_id": 12
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "telnethop2",
+      "icon": "/files/images/diagram/server.png",
+      "meta": {
+        "node_id": 13
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "WAN1-provisioner",
+      "icon": "/files/images/diagram/server.png",
+      "meta": {
+        "node_id": 14
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "WAN1-router1",
+      "icon": "/files/images/diagram/router.png",
+      "meta": {
+        "node_id": 15
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "WAN1-l2sw3",
+      "icon": "/files/images/diagram/l2switch.png",
+      "meta": {
+        "node_id": 16
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "internet",
+      "icon": "/files/images/diagram/network.png",
+      "meta": {
+        "node_id": 17
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": 0,
+      "name": "GooglePublicDNS",
+      "icon": "/files/images/diagram/server_v.png",
+      "meta": {
+        "node_id": 18
+      },
+      "x": 0,
+      "y": 0
+    }
+  ]
+}

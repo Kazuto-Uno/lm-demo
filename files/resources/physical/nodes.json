@@ -1,0 +1,668 @@
+[
+  {
+    "id":1,
+    "name":"firewall",
+    "node_extra_attributes":[
+      {
+        "id":1,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":1,
+        "value_bool":{ "Bool":false,"Valid":true },
+        "value_float":{ "Float64":0,"Valid":false },
+        "value_int":{ "Int64":0,"Valid":false },
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{ "Int64":0,"Valid":false },
+        "value_string":{ "String":"","Valid":false }
+      },
+      {
+        "id":2,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":1,
+        "value_bool":{ "Bool":false,"Valid":false },
+        "value_float":{ "Float64":0,"Valid":false },
+        "value_int":{ "Int64":0,"Valid":false },
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{ "Int64":0,"Valid":false },
+        "value_string":{ "String":"","Valid":true }
+      }
+    ],
+    "node_type":{ "id":3,"name":"Firewall" },
+    "ports":[
+      { "destination_port_id":{ "Int64":33,"Valid":true },"id":1 },
+      { "destination_port_id":{ "Int64":4,"Valid":true },"id":2 },
+      { "destination_port_id":{ "Int64":7,"Valid":true },"id":3 },
+      { "destination_port_id":{ "Int64":15,"Valid":true },"id":10 }
+    ]
+  },
+  {
+    "id":2,
+    "name":"l2sw1",
+    "node_extra_attributes":[
+      {
+        "id":3,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":2,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":4,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":2,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":1,"name":"L2Switch" },
+    "ports":[
+      { "destination_port_id":{ "Int64":2,"Valid":true },"id":4 },
+      { "destination_port_id":{ "Int64":11,"Valid":true },"id":5 },
+      { "destination_port_id":{ "Int64":12, "Valid":true },"id":6 }
+    ]
+  },
+  {
+    "id":3,
+    "name":"l2sw2",
+    "node_extra_attributes":[
+      {
+        "id":5,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":3,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":6,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":3,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":1,"name":"L2Switch" },
+    "ports":[
+      { "destination_port_id":{ "Int64":3,"Valid":true },"id":7 },
+      { "destination_port_id":{ "Int64":13,"Valid":true },"id":8 },
+      { "destination_port_id":{ "Int64":14,"Valid":true },"id":9 }
+    ]
+  },
+  {
+    "id":4,
+    "name":"inst1",
+    "node_extra_attributes":[
+      {
+        "id":7,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":4,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":8,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":4,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":6,"name":"Server" },
+    "ports":[
+      { "destination_port_id":{ "Int64":5,"Valid":true },"id":11 }
+    ]
+  },
+  {
+    "id":5,
+    "name":"inst2",
+    "node_extra_attributes":[
+      {
+        "id":9,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":5,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":10,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":5,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":6,"name":"Server" },
+    "ports":[
+      { "destination_port_id":{ "Int64":6,"Valid":true },"id":12 }
+    ]
+  },
+  {
+    "id":6,
+    "name":"inst3",
+    "node_extra_attributes":[
+      {
+        "id":11,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":6,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":12,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":6,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":6,"name":"Server" },
+    "ports":[
+      { "destination_port_id":{ "Int64":8,"Valid":true },"id":13 }
+    ]
+  },
+  {
+    "id":7,
+    "name":"inst4",
+    "node_extra_attributes":[
+      {
+        "id":13,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":7,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":14,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":7,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":6,"name":"Server" },
+    "ports":[
+      { "destination_port_id":{ "Int64":9,"Valid":true },"id":14 }
+    ]
+  },
+  {
+    "id":8,
+    "name":"l2sw7",
+    "node_extra_attributes":[
+      {
+        "id":15,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":8,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":16,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":8,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":1,"name":"L2Switch" },
+    "ports":[
+      { "destination_port_id":{ "Int64":10,"Valid":true },"id":15 },
+      { "destination_port_id":{ "Int64":18,"Valid":true },"id":16 },
+      { "destination_port_id":{ "Int64":23,"Valid":true },"id":17 }
+    ]
+  },
+  {
+    "id":9,
+    "name":"tftp",
+    "node_extra_attributes":[
+      {
+        "id":17,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":9,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":18,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":9,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":6,"name":"Server" },
+    "ports":[
+      { "destination_port_id":{ "Int64":16,"Valid":true },"id":18 }
+    ]
+  },
+  {
+    "id":10,
+    "name":"l2swk1",
+    "node_extra_attributes":[
+      {
+        "id":19,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":10,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":20,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":10,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":1,"name":"L2Switch" },
+    "ports":[
+      { "destination_port_id":{ "Int64":24,"Valid":true },"id":19 },
+      { "destination_port_id":{ "Int64":25,"Valid":true },"id":20 }
+    ]
+  },
+  {
+    "id":11,
+    "name":"l2swk2",
+    "node_extra_attributes":[
+      {
+        "id":21,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":11,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":22,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":11,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":1,"name":"L2Switch" },
+    "ports":[
+      { "destination_port_id":{ "Int64":26,"Valid":true },"id":21 },
+      { "destination_port_id":{ "Int64":28,"Valid":true },"id":22 }
+    ]
+  },
+  {
+    "id":12,
+    "name":"telnethop1",
+    "node_extra_attributes":[
+      {
+        "id":23,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":12,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":24,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":12,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":6,"name":"Server" },
+    "ports":[
+      { "destination_port_id":{ "Int64":17,"Valid":true },"id":23 },
+      { "destination_port_id":{ "Int64":19,"Valid":true },"id":24 }
+    ]
+  },
+  {
+    "id":13,
+    "name":"telnethop2",
+    "node_extra_attributes":[
+      {
+        "id":25,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":13,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":26,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":13,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":6,"name":"Server" },
+    "ports":[
+      { "destination_port_id":{ "Int64":20,"Valid":true },"id":25 },
+      { "destination_port_id":{ "Int64":21,"Valid":true },"id":26 }
+    ]
+  },
+  {
+    "id":14,
+    "name":"provisioner",
+    "node_extra_attributes":[
+      {
+        "id":27,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":14,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":28,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":14,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":6,"name":"Server" },
+    "ports":[
+      { "destination_port_id":{ "Int64":32,"Valid":true },"id":27 },
+      { "destination_port_id":{ "Int64":22,"Valid":true },"id":28 }
+    ]
+  },
+  {
+    "id":15,
+    "name":"router1",
+    "node_extra_attributes":[
+      {
+        "id":29,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":15,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":30,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":15,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":4,"name":"Router" },
+    "ports":[
+      { "destination_port_id":{ "Int64":35,"Valid":true },"id":29 },
+      { "destination_port_id":{ "Int64":31,"Valid":true },"id":30 }
+    ]
+  },
+  {
+    "id":16,
+    "name":"l2sw3",
+    "node_extra_attributes":[
+      {
+        "id":31,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":16,
+        "value_bool":{"Bool":false,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":32,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":16,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":1,"name":"L2Switch" },
+    "ports":[
+      { "destination_port_id":{ "Int64":30,"Valid":true },"id":31 },
+      { "destination_port_id":{ "Int64":27,"Valid":true },"id":32 },
+      { "destination_port_id":{ "Int64":1,"Valid":true },"id":33 }
+    ]
+  },
+  {
+    "id":17,
+    "name":"internet",
+    "node_extra_attributes":[
+      {
+        "id":33,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":17,
+        "value_bool":{"Bool":true,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":34,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":17,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":7,"name":"Network" },
+    "ports":[
+      { "destination_port_id":{ "Int64":36,"Valid":true },"id":34 },
+      { "destination_port_id":{ "Int64":29,"Valid":true },"id":35 }
+    ]
+  },
+  {
+    "id":18,
+    "name":"GooglePublicDNS",
+    "node_extra_attributes":[
+      {
+        "id":35,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":1,
+        "node_id":18,
+        "value_bool":{"Bool":true,"Valid":true},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":false}
+      },
+      {
+        "id":36,
+        "node":null,
+        "node_extra_attribute_field":null,
+        "node_extra_attribute_field_id":2,
+        "node_id":18,
+        "value_bool":{"Bool":false,"Valid":false},
+        "value_float":{"Float64":0,"Valid":false},
+        "value_int":{"Int64":0,"Valid":false},
+        "value_node_extra_attribute_option":null,
+        "value_node_extra_attribute_option_id":{"Int64":0,"Valid":false},
+        "value_string":{"String":"","Valid":true}
+      }
+    ],
+    "node_type":{ "id":6,"name":"Server" },
+    "ports":[
+      { "destination_port_id":{ "Int64":34,"Valid":true },"id":36 }
+    ]
+  }
+]

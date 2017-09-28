@@ -1,0 +1,252 @@
+{{define "functions"}}
+
+function getResources(target, query) {
+  if (query != '' && query != undefined && query != null) {
+    query = '?' + query;
+  } else {
+    query = ''
+  }
+  var response = $.ajax({
+    type: 'GET',
+    url: '/' + target + query,
+    dataType: 'json',
+    contentType: 'application/json',
+    async: false
+  });
+  var resultResources = $.parseJSON(response.responseText);
+  var result = {
+    status: response.status,
+    resources: resultResources
+  };
+  return result;
+}
+
+function getResource(target, id, query) {
+  if (query != '' && query != undefined && query != null) {
+    query = '?' + query;
+  } else {
+    query = ''
+  }
+  var response = $.ajax({
+    type: 'GET',
+    url: '/' + target + '/' + id + query,
+    dataType: 'json',
+    contentType: 'application/json',
+    async: false
+  });
+  var resultResource = $.parseJSON(response.responseText);
+  var result = {
+    status: response.status,
+    resource: resultResource
+  };
+  return result;
+}
+
+function getResourceAsText(target, id, query) {
+  if (query != '' && query != undefined && query != null) {
+    query = '?' + query;
+  } else {
+    query = ''
+  }
+  var response = $.ajax({
+    type: 'GET',
+    url: '/' + target + '/' + id + query,
+    dataType: 'json',
+    contentType: 'application/json',
+    async: false
+  });
+  var resultResource = response.responseText;
+  var result = {
+    status: response.status,
+    resource: resultResource
+  };
+  return result;
+}
+
+function postResource(target, resource, query) {
+  if (query != '' && query != undefined && query != null) {
+    query = '?' + query;
+  } else {
+    query = ''
+  }
+  var response = $.ajax({
+    type: 'POST',
+    url: '/' + target + query,
+    dataType: 'json',
+    contentType: 'application/json',
+    data: JSON.stringify(resource),
+    async: false
+  });
+  var resultResource = $.parseJSON(response.responseText);
+  var result = {
+    status: response.status,
+    resource: resultResource
+  };
+  return result;
+}
+
+function putResource(target, id, resource, query) {
+  if (query != '' && query != undefined && query != null) {
+    query = '?' + query;
+  } else {
+    query = ''
+  }
+  var response = $.ajax({
+    type: 'PUT',
+    url: '/' + target + '/' + id + query,
+    dataType: 'json',
+    contentType: 'application/json',
+    data: JSON.stringify(resource),
+    async: false
+  });
+  var resultResource = $.parseJSON(response.responseText);
+  var result = {
+    status: response.status,
+    resource: resultResource
+  };
+  return result;
+}
+
+function deleteResource(target, id, query) {
+  if (query != '' && query != undefined && query != null) {
+    query = '?' + query;
+  } else {
+    query = ''
+  }
+  var response = $.ajax({
+    type: 'DELETE',
+    url: '/' + target + '/' + id  + query,
+    dataType: 'json',
+    contentType: 'application/json',
+    async: false
+  });
+  var resultResource = null;
+  if (response.responseText != '') {
+    resultResource = $.parseJSON(response.responseText);
+  }
+  var result = {
+    status: response.status,
+    resource: resultResource
+  };
+  return result;
+}
+
+function buildResouceMapFromResourceArray(resources) {
+  var result = {};
+  for (var i = 0; i < resources.length; i = i + 1) {
+    var resource = resources[i];
+    result[resource.id] = resource;
+  }
+  return result;
+}
+
+function rebuildMapByName(resourceMap) {
+  var result = {};
+  for (key in resourceMap) {
+    result[resourceMap[key].name] = resourceMap[key];
+  }
+  return result;
+}
+
+function convertSqlNullObject(nullValue, typeString, value) {
+  var result = {};
+  if (typeString == 'Int64') {
+    result[typeString] = parseInt(value);
+  } else {
+    result[typeString] = value;
+  }
+  if (nullValue == value) {
+    result['Valid'] = false;
+  }
+  else {
+    result['Valid'] = true;
+  }
+  return result;
+}
+
+function convertStringToBoolean(value) {
+  if (!value) {
+    return false;
+  }
+  return (value.toLowerCase()) == 'true';
+}
+
+function convertBooleanToString(value) {
+  if (!value) {
+    return 'false';
+  }
+  return 'true';
+}
+
+function getUrlVars() {
+  var vars = [], hash;
+  var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+  for (var i = 0; i < hashes.length; i++) {
+    hash = hashes[i].split('=');
+    vars.push(hash[0]);
+    vars[hash[0]] = hash[1];
+  }
+  return vars;
+}
+
+function createCheckboxElement(name, style, value) {
+	var input = $('<input>').prop('name', name).prop('style', style).prop('type', 'checkbox').attr('checked', value)[0];
+	return input;
+}
+
+function createTextElement(name, style, placeholder, value) {
+	var input = $('<input>').prop('name', name).prop('class', 'form-control').prop('type', 'text').prop('style', style).prop('placeholder', placeholder).val(value).attr('value', value)[0];
+	return input;
+}
+
+function createHiddenElement(name, value) {
+	var input = $('<input>').prop('name', name).prop('type', 'hidden').val(value).attr('value', value)[0];
+	return input;
+}
+
+function createSelectOptionsElement(options) {
+	var result = [];
+	for (var i = 0; i < options.length; i = i + 1) {
+		result.push($('<option>').val(options[i].value).text(options[i].text));
+	}
+	return result;
+}
+
+function createSelectElement(name, style, options, value) {
+	var select =  $('<select>').prop('name', name).prop('class', 'form-control').prop('style', style);
+	var editPortSelectOptionsElement = createSelectOptionsElement(options);
+	for (var i = 0; i < editPortSelectOptionsElement.length; i = i + 1) {
+		if (value == editPortSelectOptionsElement[i].val()) {
+			select.append(editPortSelectOptionsElement[i].attr('selected', 'selected'));
+		} else {
+			select.append(editPortSelectOptionsElement[i]);
+		}
+	}
+	return select[0];
+}
+
+function showProcessResult(result, successCode, successMessage, ignoreSuccess, customFunction) {
+  if (result.status == successCode) {
+    if (!ignoreSuccess) {
+      $('html,body').animate({
+        scrollTop: 0
+      }, 'slow');
+      $('#information_message').text(successMessage);
+      $('#alert_info').fadeIn(500).delay(2000).fadeOut(1000);
+      if (customFunction != null) {
+        customFunction();
+      }
+    }
+    return true;
+  }
+  else {
+    $('html,body').animate({
+      scrollTop: 0
+    }, 'slow');
+    $('#error_message').text(result.resource.error);
+    $('#alert_error').fadeIn(500).delay(2000).fadeOut(1000);
+    return false;
+  }
+}
+
+{{end}}

@@ -1,0 +1,100 @@
+{{ define "edit_node" }}
+<div class="item-edit-panel">
+	<!-- Item Edit Panel -->
+	<div class="panel panel-default" id="edit_panel">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				<span class="glyphicon glyphicon-edit"></span>
+				<span id="edit_panel_title"></span>
+			</h3>
+		</div>
+		<div class="panel-body">
+			<table class="table">
+				<tr>
+					<th width="20%">
+						<span class="glyphicon glyphicon-file"></span> Property
+					</th>
+					<th width="80%">
+						<span class="glyphicon glyphicon-pencil"></span> Value
+					</th>
+				</tr>
+				<tr>
+					<td width="20%">Node Name</td>
+					<td width="80%">
+						<input type="hidden" id="edit_id">
+						<input id="edit_name" type="text" name="edit_name" placeholder="node name like router1" class="form-control">
+					</td>
+				</tr>
+				<tr>
+					<td width="20%">Physical/Virtual</td>
+					<td width="80%">
+						<input type="hidden" id="edit_pv_id" value="0">
+						<select class="form-control" id="edit_pv"></select>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%">Node Type</td>
+					<td width="80%">
+						<select class="form-control" id="edit_type"></select>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%">Remark</td>
+					<td width="80%">
+						<input type="hidden" id="edit_remark_id" value="">
+						<input id="edit_remark" type="text" name="edit_remark" placeholder="remark" class="form-control">
+					</td>
+				</tr>
+			</table>
+			<!-- Port-Destination Panel -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h1 class="panel-title">
+						<span class="glyphicon glyphicon-list-alt"></span> Port - Destination
+					</h1>
+				</div>
+				<div class="panel-body">
+					<table class="table table-condensed table-striped" id="edit_ports_table">
+						<thead>
+							<tr>
+								<th>&nbsp;</th>
+								<th>No.</th>
+								<th>Name</th>
+								<th>Layer</th>
+								<th>Destination Node</th>
+								<th>Destination Port</th>
+								<th>MacAddress</th>
+								<th>IPv4 Address</th>
+								<th>IPv4 Prefix</th>
+								<th>Gateway</th>
+								<th>Remark</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+				<div style="margin-left:10px;margin-bottom:10px;">
+					<span class="input-group-btn">
+						<button id="edit_add_port_btn" type="button" class="btn btn-default">
+							<span class="glyphicon glyphicon-plus"></span>Add
+						</button>
+						<button id="edit_delete_port_btn" type="button" class="btn btn-default">
+							<span class="glyphicon glyphicon-minus"></span>Delete
+						</button>
+					</span>
+				</div>
+			</div><!-- /Port-Destination Panel -->
+			<div style="margin-left:10px;margin-bottom:10px;">
+				<span class="input-group-btn">
+					<button id="ok_edit_btn" type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-ok">OK</span>
+					</button>
+					<button id="cancel_edit_btn" type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-remove">Cancel</span>
+					</button>
+				</span>
+			</div>
+		</div>
+	</div><!-- /Item Edit Panel -->
+</div>
+{{ end }}

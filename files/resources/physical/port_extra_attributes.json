@@ -1,0 +1,2378 @@
+[
+  {
+    "id": 1,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 1,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 2,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 1,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 3,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 2,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 4,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 2,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 5,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 3,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 6,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 3,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 7,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 4,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 8,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 4,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 9,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 5,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 10,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 5,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 11,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 6,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 12,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 6,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 13,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 7,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 14,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 7,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 15,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 8,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 16,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 8,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 17,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 9,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 18,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 9,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 19,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 10,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 20,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 10,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 21,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 11,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 22,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 11,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 23,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 12,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 24,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 12,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 25,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 13,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 26,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 13,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 27,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 14,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 28,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 14,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 29,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 15,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 30,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 15,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 31,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 16,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 32,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 16,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 33,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 17,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 34,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 17,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 35,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 18,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 36,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 18,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 37,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 19,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 38,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 19,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 39,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 20,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 40,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 20,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 41,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 21,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 42,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 21,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 43,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 22,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 44,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 22,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 45,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 23,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 46,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 23,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 47,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 24,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 48,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 24,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 49,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 25,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 50,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 25,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 51,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 26,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 52,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 26,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 53,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 27,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 54,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 27,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 55,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 28,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 56,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 28,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 57,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 29,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 58,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 29,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 59,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 30,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 60,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 30,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 61,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 31,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 62,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 31,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 63,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 32,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 64,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 32,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 65,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 33,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 66,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 33,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 67,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 34,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 68,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 34,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 69,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 35,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 70,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 35,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 71,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 1,
+      "name": "gateway",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 1,
+    "port_id": 36,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  },
+  {
+    "id": 72,
+    "port": null,
+    "port_extra_attribute_field": {
+      "id": 2,
+      "name": "remark",
+      "port_extra_attribute_options": null,
+      "port_extra_attributes": null
+    },
+    "port_extra_attribute_field_id": 2,
+    "port_id": 36,
+    "value_bool": {
+      "Bool": false,
+      "Valid": false
+    },
+    "value_float": {
+      "Float64": 0,
+      "Valid": false
+    },
+    "value_int": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_port_extra_attribute_option": null,
+    "value_port_extra_attribute_option_id": {
+      "Int64": 0,
+      "Valid": false
+    },
+    "value_string": {
+      "String": "",
+      "Valid": true
+    }
+  }
+]

@@ -1,0 +1,245 @@
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+}
+
+.checkbox-large input[type=checkbox] {
+	transform:		scale(1.5);
+}
+
+#side-carousel img {
+	margin: 0 auto;
+}
+
+.panel-custom {
+	display: none;
+}
+
+.node-reg-panel {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 66.66666667%;
+  height: 75%;
+  position: absolute;
+  margin: 50px auto auto auto;
+  display: none;
+  z-index: 1000;
+}
+
+.container-fluid-padding-header {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding:40px 20px 50px 20px;
+}
+
+.footer-blurb {
+  padding: 30px 0;
+  margin-top: 20px;
+  background-color: #eee;
+  color: black;
+}
+
+.footer-blurb-item {
+  padding: 20px;
+}
+
+.small-print {
+	background-color: #fff;
+	padding: 30px 0;
+}
+
+.feature,
+.page-intro,
+.article-intro,
+.small-print {
+	text-align: center;
+}
+
+.alert {
+  display: none;
+  width: 300px;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  z-index: 5000;
+  margin-left: -175px;
+}
+
+/* inet-henge */
+.group rect { opacity: 0.5; }
+
+.node,
+.group rect { cursor: move; }
+
+.node rect,
+.group rect {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.node text { font-size: 10px; }
+
+.link {
+  stroke: #888888;
+  stroke-width: 2px;
+  stroke-opacity: 1;
+}
+
+.path-label { font-size: 5px; }
+
+.loopback,
+.interface { fill: #333; }
+
+.context-menu {
+  top: 0;
+  left: 0;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background-color: #fff;
+}
+
+.context-menu ul {
+  list-style: none;
+  text-align: left;
+  font-size: 14px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  float: left;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .15);
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.context-menu ul .divider {
+  height: 1px;
+  padding: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.context-menu ul > li {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+
+.context-menu ul > li:hover,
+.context-menu ul > li:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: #f5f5f5;
+  cursor: default;
+}
+
+.context-menu ul li.divider:hover {
+  line-height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.page-cover {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  display: none;
+  z-index: 999;
+  background-color: black;
+  opacity: 0.5;
+}

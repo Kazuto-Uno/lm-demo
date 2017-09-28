@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "LM Node1",
+    "status": "online",
+    "remark": "Liquid Metal Node setting 1",
+    "content": null
+  },
+  {
+    "id": 2,
+    "name": "LM Node2",
+    "status": "online",
+    "remark": "Liquid Metal Node setting 2",
+    "content": null
+  },
+  {
+    "id": 3,
+    "name": "LM Node3",
+    "status": "offline",
+    "remark": "Liquid Metal Node setting 3",
+    "content": null
+  }
+]

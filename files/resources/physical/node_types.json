@@ -1,0 +1,9 @@
+[
+  { "id":1,"name":"L2Switch" },
+  { "id":2,"name":"L3Switch" },
+  { "id":3,"name":"Firewall" },
+  { "id":4,"name":"Router" },
+  { "id":5,"name":"LoadBalancer" },
+  { "id":6,"name":"Server" },
+  { "id":7,"name":"Network" }
+]

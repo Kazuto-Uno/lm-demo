@@ -1,0 +1,255 @@
+{{ define "nodes/physical_diagram.tmpl" }}
+{{template "headerpart" .}}
+<!-- Right Column -->
+<div >
+<div class="page-cover"></div>
+<!-- Diagram Panel -->
+<div class="panel panel-default panel-custom" id="diagram_panel">
+	<div class="panel-heading">
+		<h1 class="panel-title">
+			<span class="glyphicon glyphicon-th-large"></span>
+			<span id="diagram_title">Physical Diagram</span>
+		</h1>
+	</div>
+	<div class="panel-body" style="height: 100%;">
+		<div id="diagram_canvas"></div>
+	</div>
+</div><!-- Diagram Panel -->
+
+{{template "edit_node" .}}
+
+<div class="context-menu" id="context-menu">
+	<ul>
+	</ul>
+</div>
+
+</div><!--/Right Column-->
+
+<script language="javascript">
+(function($) {
+
+	{{template "functions" .}}
+	{{template "functions_nodes" .}}
+
+	var diagramInstance = null;
+	var distance = function(force) { force.jaccardLinkLengths(70, 0.2); }
+
+	var menuItems = {
+		diagram: [
+			{ label: "Add node", action: "add_node" },
+		],
+		node: [
+			{ label: "Edit node", action: "edit_node" },
+			{ label: "Delete node", action: "delete_node" }
+		]
+	};
+
+	// recursive check because the "text" field of the node is one lever deeper in the xml tree and will not respond to the event otherwise
+	function getContextOfTarget (target, targetValue) {
+		if(target.nodeName == "svg") {
+			return false;
+		}
+		if(target.className.baseVal.split(" ").indexOf(targetValue) > -1) {
+			return { type: targetValue, meta: target.__data__ };
+		}
+		return getContextOfTarget(target.parentNode, targetValue);
+	}
+
+	function createContextMenu(context) {
+		for(var idx in menuItems[context.type]) {
+			item = menuItems[context.type][idx];
+
+			if(item.label == null) {
+				var liElement = $('<li>').prop('class', 'divider');
+			} else {
+				var liElement = $('<li>').data('action', item.action).append(
+							$('<span>').prop('class', 'item glyphicon')
+						).append(item.label);
+
+				if(context.meta != null) {
+					for(var key in context.meta) {
+						liElement.data(key, context.meta[key]);
+					}
+				}
+				if(item.type != null) {
+					liElement.prop('id', item.type)
+				}
+			}
+			$('.context-menu ul').append(liElement);
+		}
+	}
+
+	function onUpdateContextMenu() {
+		//if(diagramType == "logical") return;
+
+		$("#diagram").ready(function() {
+			d3.select('#diagram').on("contextmenu", function(data) {
+				if($('.node-reg-panel').is(":visible")) return;
+
+				var menuElement = $('.context-menu');
+				$('.context-menu ul').empty();
+
+				d3.event.preventDefault();
+				var x = d3.event.pageX;
+				var y = d3.event.pageY;
+				var context = getContextOfTarget(d3.event.target, "node") || { type: "diagram", meta: null }
+				createContextMenu(context);
+
+				menuElement.css({left: x - $("#diagram").offset().left, top: y - 40});
+				menuElement.fadeIn(150);
+			});
+		});
+	}
+
+	function onUpdateNetworkDiagram() {
+		$('#diagram_panel').fadeOut(150, function() {
+			//$('#diagram_title').text(diagramProperties[diagramType].title);
+			$('#diagram_canvas').children().remove();
+			$('#diagram_canvas').append($('<div>').prop('id', 'diagram'));
+			$('#diagram_panel').fadeIn(150, function() {
+				if (diagramInstance == null) {
+					diagramInstance = new Diagram('#diagram', '/files/resources/physical/diagram.json', {
+						pop: /^([^\s-]+)-/,
+						distance: distance,
+						width: $('#diagram_canvas').width(),
+						height: ($(window).height() - 180)
+					});
+				}
+				diagramInstance.init('interface', 'node_id');
+				restoreNodeLocation();
+				onUpdateContextMenu()
+			});
+		});
+	}
+
+	function loopSleep(_loopLimit,_interval, _mainFunc){
+		var loopLimit = _loopLimit;
+		var interval = _interval;
+		var mainFunc = _mainFunc;
+		var i = 0;
+		var loopFunc = function () {
+			var result = mainFunc(i);
+			if (result === false) {
+				return;
+			}
+			i = i + 1;
+			if (i < loopLimit) {
+				setTimeout(loopFunc, interval);
+			}
+		}
+		loopFunc();
+	}
+
+	function onMouseUpOnNode(e) {
+		var node = e.target.__data__;
+		var nodeID = node.meta[0].value;
+		var x = node.x;
+		var y = node.y;
+		diagramNode = {
+			id: nodeID,
+			x: x,
+			y: y
+		}
+		//putResource('diagrams/physical/diagram_nodes', nodeID, diagramNode);
+	}
+
+	function restoreNodeLocation() {
+		//if(diagramType == "logical") return;
+
+		$("#diagram").ready(function() {
+			loopSleep(100, 200, function(i){
+			  n = d3.select('#diagram').selectAll('.node');
+				ns = n[0];
+				if (ns.length > 0) {
+					var diagramNodes = getResources('files/resources/physical/diagram_pos.json', null).resources;
+					var diagramNodeMap = buildResouceMapFromResourceArray(diagramNodes);
+					for (var i = 0; i < ns.length; i ++) {
+						ns[i].onmouseup = onMouseUpOnNode;
+						var nodeID = ns[i].__data__.meta[0].value;
+						var diagramNode = diagramNodeMap[nodeID];
+						if (diagramNode != null) {
+							ns[i].__data__.x = diagramNode.x;
+							ns[i].__data__.y = diagramNode.y;
+						}
+					}
+					diagramInstance.cola.start();
+					return false;
+				}
+			});
+			return true;
+		});
+	}
+
+	function onNodeModified() {
+		$('.page-cover').fadeOut(150);
+		$('.item-edit-panel').fadeOut(150);
+		loadResources();
+		onUpdateNetworkDiagram();
+	}
+
+	function onLoad() {
+		$('.page-cover').fadeOut(150);
+		$('.item-edit-panel').fadeOut(150);
+		loadResources();
+		setEditPortsTable();
+		onUpdateNetworkDiagram();
+	}
+
+	var timer = false;
+	$(window).resize(function() {
+	    if (timer !== false) {
+	        clearTimeout(timer);
+	    }
+	    timer = setTimeout(function() {
+	        onUpdateNetworkDiagram();
+	    }, 200);
+	});
+
+	$("body").on("click", function(event) {
+		$('.context-menu').fadeOut(150);
+	});
+
+	// context menu options
+	$('#context-menu').on('click', function(event) {
+		switch($(event.target).data("action")) {
+		case "add_node":
+			onNewNode();
+			break;
+		case "edit_node":
+			onEditNode($(event.target).data("meta")[0].value);
+			break;
+		case "delete_node":
+			onDeleteNode($(event.target).data("meta")[0].value);
+			break;
+		}
+	});
+
+	//edit_panel
+	// ports
+	$('#edit_add_port_btn').on('click', function() {
+		onAddPort();
+	});
+
+	$('#edit_delete_port_btn').on('click', function() {
+		onDeletePort();
+	});
+
+	$('#edit_ports_table').on('change', 'select[name=edit_port_destination_node_id]', function(selector) {
+		onEditPortNodeChanged(selector);
+	});
+
+	$('#ok_edit_btn').on('click', function() {
+		onOKRegister();
+	});
+
+	$('#cancel_edit_btn').on('click', function() {
+		onCancelRegister();
+	});
+
+	onLoad();
+
+})(jQuery);
+</script>
+
+{{template "footerpart" .}}
+{{ end }}

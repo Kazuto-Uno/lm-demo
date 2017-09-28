@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "virtual",
+    "node_extra_attribute_options": null,
+    "node_extra_attributes": null
+  },
+  {
+    "id": 2,
+    "name": "remark",
+    "node_extra_attribute_options": null,
+    "node_extra_attributes": null
+  }
+]
