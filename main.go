@@ -2,14 +2,21 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
+	"os"
 
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
 	r := gin.Default()
-    r.StaticFS("/files", http.Dir("files"))
+    r.Static("/files", "files")
 
 	templateBase := "templates"
 	templateFileNames := []string{
@@ -50,5 +57,5 @@ func main() {
 
 	}
 
-	r.Run(":8080")
+	r.Run(":" + port)
 }
